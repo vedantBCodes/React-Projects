@@ -1,0 +1,81 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navContainer
+{
+  height: 72px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+ 
+}
+.menuBar
+{
+  display: flex;
+  gap: 20px;
+}
+li
+{
+  list-style: none;
+  font-weight: bold;
+
+}
+#logInBtn
+{
+  width: 70px;
+  padding: 10px 5px ;
+  color: white;
+  background-color: red;
+  border: none;
+  font-weight: bold;
+  
+}
+.mainContainer
+{
+  height: 60vh;
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  margin: 70px 100px;
+}
+
+h1
+{
+  font-size: 100px;
+  font-weight: 700;
+}
+h1 + p
+{
+  width: 28vw;
+  font-weight: 550;
+  line-height:23px;
+}
+.btns
+{
+  display: flex;
+  margin: 40px;
+  gap: 20px;
+}
+.btns button
+{
+  padding: 10px 15px;
+  font-size: 20px;
+}
+#shopNowBtn
+{
+  color: white;
+  background-color: red;
+}
+#categoryBtn
+{
+  background-color: transparent;
+}
+.logoBtns
+{
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
