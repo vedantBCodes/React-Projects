@@ -1,0 +1,48 @@
+*
+{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.cardContainer
+{
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+.card
+{
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(247, 243, 239);
+  padding: 20px;
+  border-radius: 5px;
+}
+#priceAndCartBtn
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 20px;
+}
+button
+{
+  padding: 10px;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+}
+.card img
+{
+  height: 40vh;
+  border-radius: 5px;
+
+}
