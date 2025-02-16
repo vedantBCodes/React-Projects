@@ -32,7 +32,7 @@
   align-items: flex-start;
   gap: 20px;
 }
-button
+.card button
 {
   padding: 10px;
   color: white;
@@ -45,4 +45,51 @@ button
   height: 40vh;
   border-radius: 5px;
 
+}
+.cartItem
+{
+  width: 20vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: rgb(247, 243, 239);
+  padding: 20px;
+  border-radius: 5px;
+}
+#plusMinusBtns 
+{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 10px;
+}
+#plusMinusBtns span button
+{
+  padding: 5px 10px;
+}
+#cartImage
+{
+  width: 50px;
+}
+.cartImage
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+#itemCount
+{
+  color: white;
+  background-color: red;
+  padding: 5px 10px;
+  border-radius: 50%;
+  position: relative;
+  right: 19px;
+}
+main
+{
+  display: flex;
+  flex-direction: column;
 }
