@@ -1,0 +1,136 @@
+*
+{
+  margin: 0;
+  padding: 0;
+}
+ul
+{
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  align-items: center;
+  height: 8vh;
+  padding: 0px 20px;
+  background-color: #0D6EFD;
+}
+#links li
+{
+  font-size: 20px;
+  color: white;
+  list-style: none;
+  text-decoration: #0D6EFD underline;
+}
+#links
+{
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+}
+#cartItemCount
+{
+  background-color: red;
+  color: white;
+  padding: 2px 10px;
+  border-radius: 50%;
+  position: relative;
+  right: 10px;
+  bottom: 15px;
+}
+i
+{
+  font-size: 30px;
+}
+.container
+{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  gap: 3px;
+  /* border: 0.8px solid black; */
+  border-radius: 10px;
+  padding: 10px 0px;
+  margin-top: 10px;
+  box-shadow: 1px 1px 1px 1px black;
+  background-color: rgb(246, 247, 247);
+}
+
+.brandAndItem span
+{
+  font-size: 17px;
+  margin-left: 25px;
+}
+.container  button
+{
+  width: 200px;
+  padding: 13px;
+  color: white;
+  background-color: #0D6EFD;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+.container img
+{
+  width: 200px;
+  height: 250px;
+  border-radius: 5px;
+}
+.productContainer
+{
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#prize
+{
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.cartContainer img
+{
+  width: 130px;
+  height: 150px;
+}
+.cartContainer
+{
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  gap: 30px;
+  margin: 10px;
+  border: 1px solid rgb(185, 183, 183);
+  padding: 10px;
+  border-radius: 5px;
+}
+.cartBrandAndItem > :first-child
+{
+  font-size: 27px;
+  /* font-weight: bold; */
+}
+.cartBrandAndItem
+{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+}
+#itemCount
+{
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+}
+#itemCount button
+{
+  padding: 5px 7px;
+  background-color: white;
+  color: black;
+  border: 0.01 solid rgb(255, 255, 255);
+  border-radius: 5px;
+}
