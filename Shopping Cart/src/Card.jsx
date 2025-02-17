@@ -61,7 +61,7 @@ function handleCartItems(index)
         </div>
     </div>
     ))}
-    <h1>Shopping Cart</h1> <br /> <br />
+    <h1>Cart Items :</h1>
     {
     cardItemIndex.map((itemIndex)=>
    (

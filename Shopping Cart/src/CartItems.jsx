@@ -8,9 +8,11 @@ const CartItems = ({index, shoppingCart,cardItemIndex,setCardItemIndex}) =>
         SetCount(count-1);
         if(count==1)
         {
-            cardItemIndex.splice(index, 1);
-            setCardItemIndex([...cardItemIndex]);
+            var i=cardItemIndex.indexOf(index);
+            cardItemIndex.splice(i, 1);
+            // setCardItemIndex([...cardItemIndex]);
             // alert('item removed');
+            SetCount(count);
         }
     }
     function increment()
