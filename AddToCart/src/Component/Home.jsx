@@ -15,7 +15,7 @@ const Home = ({ SetCartItemId}) => {
         {productList.map((product,index)=>
         {
             return(
-                <div className="container" key={index}>
+            <div className="container" key={index}>
             <div>
             <img src={product.img} alt="" />
             </div>

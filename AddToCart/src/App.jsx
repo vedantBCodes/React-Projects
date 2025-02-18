@@ -3,7 +3,7 @@ import Header from './Component/Header'
 import Home from './Component/Home';
 import Cart from './Component/Cart';
 import { useState } from 'react';
-import productList from './component/data';
+import productList from './Component/data';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { useEffect } from 'react';
 
@@ -23,9 +23,9 @@ function App()
   return (
     <>      
     <BrowserRouter>
-        <Header cartAllProduct={cartAllProduct}/>
-        <Routes>
-          <Route
+        <Header cartAllProduct={cartAllProduct}/> {/*  Here this <header/> component will be always there on every page  */}
+        <Routes>  {/* Create seperate route */}
+          <Route   
             path="/"
             element={<Home SetCartItemId={SetCartItemId}/>}
           ></Route>

@@ -13,8 +13,8 @@ const Header = ({cartAllProduct}) => {
             </div>
             <div>
             <NavLink to="/cart">
-             <li style={{color:'white'}} >
-               <i className="fa-solid fa-cart-shopping fs-3 "></i>
+             <li style={{color:'white',textDecoration:'#0D6EFD underline'}} >
+               <i className="fa-solid fa-cart-shopping fs-3 "></i>   {/* icon from font-awesome */}
                <span id='cartItemCount'>{cartAllProduct.length}</span>
                </li>
             </NavLink>
