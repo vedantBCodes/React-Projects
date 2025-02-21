@@ -1,0 +1,56 @@
+body
+{
+  width: 100vw;
+  display: flex;
+  justify-content:  center;
+  align-items:  center;
+}
+.container
+{
+  width: 55vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 2px 2px 2px 2px rgb(225, 224, 224);
+  border-radius: 10px;
+}
+.container input
+{
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border: none;
+  box-shadow: 1px 1px 1px 1px black;
+  border-radius: 5px;
+  margin-top: 7px;
+}
+.btns 
+{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.btns button
+{
+  border: none;
+  font-size: 15px;
+  padding: 10px;
+  border-radius: 5px;
+  
+  
+}
+#calculate
+{
+  width: 120px;
+  color: white;
+  background-color: black;
+}
+label
+{
+  font-size: 18px;
+  padding: 10px;
+}
