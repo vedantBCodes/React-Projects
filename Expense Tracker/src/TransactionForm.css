@@ -1,0 +1,28 @@
+input[type='number'] , input[type='text']
+{
+    padding: 10px;
+    width: 100%;
+    border: none;
+    font-size: 20px;
+    box-shadow: 1px 1px 1px 1px black;
+}
+label
+{
+    font-size: 20px;
+}
+form button
+{
+  padding: 10px 20px;
+  width: 100%;
+  color: white;
+  background-color: black;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+}
+form
+{
+    padding: 20px 30px;
+    border: 1px solid rgb(173, 169, 169);
+    border-radius: 10px;
+}

@@ -2,106 +2,56 @@
 {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
-.section
+main
 {
-  /* height: 50vh; */
-  /* width: 30vw; */
+  width: 100vw;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  padding: 50px;
-  /* background-color: rgb(246, 243, 239); */
-  gap: 20px;
-  border-radius: 10px;
-}
-.App
-{
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-h2
+.container
 {
-  display: inline;
-  margin-right: 70px;
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+  /* box-shadow: 2px 2px 2px 2px black; */
 }
-button , input[type='submit']
+#balanceAndBtn
 {
-  padding: 7px 15px;
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 20px;
+}
+#balanceAndBtn button
+{
+  padding: 0px 20px;
   color: white;
   background-color: black;
+  border: none;
   border-radius: 5px;
-}
-
-.expenseAndIncome p
-{
-  display: inline-block;
   font-size: 20px;
-  border: 1px solid black;
-  border-radius: 10px;
-  width: 10vw;
-  margin: 10px;
+}
+#expenseAndIncome
+{
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 20px;
+}
+#expenseAndIncome > span
+{
+  border: 1px solid rgb(155, 151, 151);
   padding: 10px 20px;
-}
-input[type='number'] , input[type='text']
-{
-  padding: 10px;
-  width: 20vw;
-}
-label 
-{
-  font-size: 20px;
-  
-}
-input[type='radio']
-{
-  margin-right: 30px;
-}
-#income , #expense
-{
-  /* margin-left: 80px; */
-}
-#expense span
-{
-  color: red;
-}
-#income span
-{
-  color: green;
-}
-.transaction
-{
-  width: 30vw;
-  margin-left: 35%;
-  padding: 20px;
-  border: 1px solid black;
-  border-radius: 10px;
-  display: none;
-}
-.tHistory 
-{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  /* gap: 200px; */
-  font-size: 30px;
-  /* background-color: aliceblue; */
-  /* margin: 0px 50px; */
-  /* float:inline-start; */
-}
-.tHistory2
-{
-  width: 40vw;
-  /* background-color: antiquewhite; */
-  display: flex;
-  flex-direction: row;
-  justify-content:space-between;
-  align-items: flex-start;
-  border: 1px solid black;
-  padding: 10px;
   border-radius: 5px;
 }
