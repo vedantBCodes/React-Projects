@@ -1,44 +1,52 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
+import { useState } from 'react';
 import './TransactionForm.css'
-const TransactionForm = ({FormData,setFormdata}) => {
-    const [Amount , setAmount] = useState(0);
-    const [Description , setDescription] = useState(0);
-    const [selectedOption, setSelectedOption] = useState("");
-    const [isExpense , setIsExpense] = useState("");
-    const [isIncome, setIsIncome] = useState("");
-    const handleChange = (event) => {
-        setSelectedOption(event.target.value);
-      };
-    function handleSubmit(e)
-    {
-        e.preventDefault();
-        setFormdata(() => {
-            FormData.Amount=Amount,
-            FormData.Description=Description
-            if(selectedOption=='expense')
-            {
-                setIsExpense(true);
-                FormData.isExpense=isExpense;
-            }
-            else
-            {
-                setIsIncome(true);
-                FormData.isIncome=isIncome;
-            }
-        });
-          console.log(FormData);
-    }
+const TransactionForm = ({FormData,setFormdata}) => 
+{
+    // const [Amount , setAmount] = useState(0);
+    // const [Description , setDescription] = useState(0);
+    // const [selectedOption, setSelectedOption] = useState("");
+    // const [isExpense , setIsExpense] = useState("");
+    // const [isIncome, setIsIncome] = useState("");
+    const [data,setData] = useState({
+        Amount : "",
+        Description : "",
+        incomeOrExpense : ""
+    });
+    function handleChange(e)
+  {
+    e.preventDefault();
+    setData({ ...data, [e.target.name]: e.target.value });
+  }
+  function showData(event)
+  {
+    event.preventDefault();
+    setFormdata([...FormData,data]);
+    console.log(data.incomeOrExpense);
+    setData({
+        Amount : "",
+        Description : "",
+        incomeOrExpense : ""
+    });
+    reset();
+  }
+  function reset()
+  {
+    let inputs = document.querySelectorAll('input');
+    inputs.forEach((input)=>{
+        input.value='';
+    })
+  }
   return (
     <div>
-        <form action="">
-            <input type="number"  placeholder='Amount' onChange={(e)=>{setAmount(e.target.value)}}/> <br /> <br />
-            <input type="text" placeholder='Description'onChange={(e)=>{setDescription(e.target.value)}}/> <br /> <br />
-            <input type="radio" name='radioBtn' id='expense' onChange={handleChange}/>  &nbsp;
+        <form action="" onSubmit={showData}>
+            <input type="number"  placeholder='Amount'  name="Amount" onChange={handleChange} required/> <br /> <br />
+            <input type="text" placeholder='Description' name="Description" onChange={handleChange} required/> <br /> <br />
+            <input type="radio" name='incomeOrExpense' id='expense'  value="expense" onChange={handleChange} required />  &nbsp;
             <label htmlFor="expense">Expense</label> &nbsp;  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;
-            <input type="radio" name='radioBtn' id='income' onChange={handleChange}/>  &nbsp;
+            <input type="radio" name='incomeOrExpense' id='income' value="income" onChange={handleChange} required />  &nbsp;
             <label htmlFor="income">Income</label> <br /> <br />
-            <button onClick={handleSubmit}>Add Transaction</button>
-        </form>
+            <button >Add Transaction</button>        </form>
     </div>
   )
 }

@@ -55,3 +55,20 @@ main
   padding: 10px 20px;
   border-radius: 5px;
 }
+#THistory
+{
+  width: 70%;
+}
+li
+{
+ 
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+  font-size: 20px;
+  margin: 5px;
+}
