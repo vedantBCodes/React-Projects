@@ -1,0 +1,68 @@
+main
+{
+  width: 100vw;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.container
+{
+  width: 300px;
+  padding: 0px 30px 30px 30px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(68, 66, 66);
+}
+
+h2
+{
+  background-color: rgb(163, 161, 161);
+  width: 100%;
+  padding: 15px 27px;
+  border-radius: 5px;
+  text-align: center;
+}
+.container input
+{
+  width: 100%;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+}
+.btns
+{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+button
+{
+  color: rgb(113, 172, 25);
+  background-color: black;
+  width: 23%;
+  height: 40px;
+  font-size: 20px;
+}
+.number
+{
+  color: white;
+  background-color: black;
+  width: 23%;
+  height: 45px;
+  font-size: 20px;
+}
+.equalToBtn
+{
+  width: 46%;
+  height: 45px;
+}
