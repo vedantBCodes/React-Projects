@@ -8,4 +8,4 @@ Here i will be providing the links of all the deployed react apps
 
 4. [BMICalculator](https://bmicalculator-04.netlify.app/)
 
-5. [BMICalculator](https://to-do-05.netlify.app/)
+5. [ToDo](https://to-do-05.netlify.app/)
