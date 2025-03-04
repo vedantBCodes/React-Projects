@@ -17,9 +17,11 @@ const height = useRef();
     let newBMI = BMI.toFixed(2);    
     let result1=document.createElement('span');
     result1.innerText=`Your BMI is ${newBMI} kg/m2 And `;
+    result1.id='result1';
     result1.style.fontSize='20px';
     container.appendChild(result1);
     let result2=document.createElement('span');
+    result2.id='result2'
     if(newBMI<18.5)
     {
       result2.innerText=`You are underweight`;
@@ -38,13 +40,19 @@ const height = useRef();
      }
     result2.style.fontSize='20px';
     container.appendChild(result2);
+    weight.current.value='';
+    height.current.value='';
+
   }
   function clear()
   {
+    let r1=document.getElementById('result1');
+    let r2=document.getElementById('result2');
     const container=document.querySelector('.container');
     weight.current.value='';
     height.current.value='';
-    container.removeChild(container.lastElementChild); 
+    container.removeChild(r1); 
+    container.removeChild(r2); 
   }
   return (
     <>
