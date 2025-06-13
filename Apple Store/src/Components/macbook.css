@@ -1,0 +1,39 @@
+.macProductContainer
+{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    margin: 1% 10%;
+    
+}
+.c1
+{
+    background-color: aliceblue;
+    padding: 20px;
+}
+.c2
+{
+    background-color: rgb(209, 225, 241);
+    padding: 20px;
+}
+.c1 img
+{
+   width: 400px;
+}
+.c2 img
+{
+   width: 50px;
+   
+}
+.c2 
+{
+    text-align: left;
+}
+/* .c2 h1 , .c2 p 
+{
+    text-align: left;
+}
+.c2 a
+{
+    text-align: left;
+} */
