@@ -1,0 +1,166 @@
+/* Root Layout */
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Global Styles */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* background: linear-gradient(to right, #e0eafc, #cfdef3); */
+  margin: 0 ;
+  padding: 0;
+}
+
+/* Container */
+.container {
+  max-width: 750px;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.styled-form {
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: inherit;
+}
+
+.styled-form h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.styled-form label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #333;
+}
+
+.styled-form input,
+.styled-form select {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.styled-form select {
+  background-color: white;
+}
+
+.styled-form input:focus,
+.styled-form select:focus {
+  border-bottom: 2px solid #2980b9;
+}
+
+/* Buttons */
+button {
+  padding: 12px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: #2980b9;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #1c5980;
+}
+
+button + button {
+  margin-left: 10px;
+  background-color: #7f8c8d;
+}
+
+button + button:hover {
+  background-color: #616a6b;
+}
+
+/* Receipt Section */
+.receipt-box {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0px 30px;
+  border: 1px solid #ccc;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+.receipt-header {
+  text-align: center;
+  border-bottom: 2px solid #444;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.receipt-header h2 {
+  margin: 0;
+  font-size: 24px;
+  color: #222;
+}
+
+.receipt-info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.receipt-info p {
+  flex: 1 1 45%;
+  margin: 4px 0;
+}
+
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.receipt-table th,
+.receipt-table td {
+  border: 1px solid #999;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.receipt-table th {
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.total-section {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+.logo-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logo {
+  width: 140px;
+  height: auto;
+}
