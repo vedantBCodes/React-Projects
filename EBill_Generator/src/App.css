@@ -164,3 +164,102 @@ button + button:hover {
   width: 140px;
   height: auto;
 }
+.form-container {
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.styled-form {
+  width: 100%;
+  max-width: 500px;
+  background-color: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.styled-form h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #2c3e50;
+}
+
+.styled-form label {
+  margin-top: 1rem;
+  font-weight: 600;
+  display: block;
+  color: #333;
+}
+
+.styled-form input,
+.styled-form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.3rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.styled-form input:focus,
+.styled-form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.styled-form button {
+  margin-top: 2rem;
+  width: 100%;
+  padding: 0.9rem;
+  background-color: #28a745;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.styled-form button:hover {
+  background-color: #218838;
+}
+
+/* Responsive for Android/Mobile */
+@media (max-width: 600px) {
+  .styled-form {
+    padding: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .styled-form input,
+  .styled-form select {
+    font-size: 1rem;
+  }
+
+  .styled-form button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+}
+.receipt-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.receipt-container h2 {
+  text-align: center;
+  color: #3f51b5;
+}
+
+.receipt-container p {
+  margin: 5px 0;
+  font-size: 14px;
+}

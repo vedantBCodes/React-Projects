@@ -134,54 +134,98 @@ function BillForm() {
   return (
     <div className="container">
       {!submitted ? (
-        <form onSubmit={handleSubmit} className="styled-form">
-          <h2>Billing Receipt Form</h2>
+<div className="form-container">
+  <form onSubmit={handleSubmit} className="styled-form">
+    <h2>Billing Receipt Form</h2>
 
-          <label>Full Name *</label>
-          <input name="customerName" onChange={handleChange} required />
+    <label>Full Name *</label>
+    <input
+      name="customerName"
+      onChange={handleChange}
+      required
+      placeholder="Enter full name"
+    />
 
-          <label>Mobile Number *</label>
-          <input name="mobile" onChange={handleChange} required />
+    <label>Mobile Number *</label>
+    <input
+      name="mobile"
+      onChange={handleChange}
+      required
+      placeholder="Enter 10-digit mobile number"
+    />
 
-          <label>Email ID</label>
-          <input name="email" onChange={handleChange} />
+    <label>Email ID</label>
+    <input
+      name="email"
+      onChange={handleChange}
+      placeholder="Enter email address (optional)"
+    />
 
-          <label>Student's Address</label>
-          <input name="address" onChange={handleChange} />
+    <label>Student's Address</label>
+    <input
+      name="address"
+      onChange={handleChange}
+      placeholder="Enter full address"
+    />
 
-          <label>Property Name *</label>
-          <select name="propertyName" onChange={handleChange} required>
-            <option value="">Select Property Name</option>
-            <option value="Comfort Living Moonstone">
-              Comfort Living Moonstone
-            </option>
-            <option value="Comfort Living Valeria">
-              Comfort Living Valeria
-            </option>
-          </select>
+    <label>Property Name *</label>
+    <select name="propertyName" onChange={handleChange} required>
+      <option value="">-- Select Property --</option>
+      <option value="Comfort Living Moonstone">Comfort Living Moonstone</option>
+      <option value="Comfort Living Valeria">Comfort Living Valeria</option>
+    </select>
 
-          <label>Room Number</label>
-          <input name="roomNo" onChange={handleChange} />
+    <label>Room Number</label>
+    <input
+      name="roomNo"
+      onChange={handleChange}
+      placeholder="Enter room number"
+    />
 
-          <label>Invoice Date (YYYY-MM-DD)</label>
-          <input name="invoiceDate" onChange={handleChange} />
+    <label>Invoice Date (YYYY-MM-DD)</label>
+    <input
+      name="invoiceDate"
+      onChange={handleChange}
+      placeholder="e.g. 2025-06-14"
+    />
 
-          {/* <hr /> */}
+    <label>Room Deposit (₹)</label>
+    <input
+      name="roomDeposit"
+      type="number"
+      onChange={handleChange}
+      placeholder="Enter deposit amount"
+    />
 
-          <label>Room Deposit (₹)</label>
-          <input name="roomDeposit" type="number" onChange={handleChange} />
+    <label>Room Rent (₹)</label>
+    <input
+      name="roomRent"
+      type="number"
+      onChange={handleChange}
+      placeholder="Enter rent amount"
+    />
 
-          <label>Room Rent (₹)</label>
-          <input name="roomRent" type="number" onChange={handleChange} />
+    <label>Maintenance Charges (₹)</label>
+    <input
+      name="maintenance"
+      type="number"
+      onChange={handleChange}
+      placeholder="Enter maintenance charges"
+    />
 
-          <label>Maintenance Charges (₹)</label>
-          <input name="maintenance" type="number" onChange={handleChange} />
+    <label>E-Bill Amount (₹)</label>
+    <input
+      name="preBooking"
+      type="number"
+      onChange={handleChange}
+      placeholder="Enter e-bill amount"
+    />
 
-          <label>E-Bill Amount (₹)</label>
-          <input name="preBooking" type="number" onChange={handleChange} />
+    <button type="submit">Generate Receipt</button>
+  </form>
+</div>
 
-          <button type="submit">Generate Receipt</button>
-        </form>
+
       ) : (
         <div>
           <div ref={receiptRef} className="receipt-box">
