@@ -232,6 +232,7 @@ button + button:hover {
   .styled-form {
     padding: 1rem;
     font-size: 0.95rem;
+    /* width: 90%; */
   }
 
   .styled-form input,
@@ -262,4 +263,26 @@ button + button:hover {
 .receipt-container p {
   margin: 5px 0;
   font-size: 14px;
+}
+/* Responsive for Android/Mobile */
+@media (max-width: 600px) {
+  .styled-form {
+    /* padding: 1.2rem; */
+    font-size: 0.95rem;
+    width: 100%; /* Increased width for smaller screens */
+  }
+
+  .styled-form input,
+  .styled-form select {
+    font-size: 1rem;
+  }
+
+  .styled-form button {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
 }
