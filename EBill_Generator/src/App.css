@@ -286,3 +286,147 @@ button + button:hover {
     padding: 1rem;
   }
 }
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 1rem;
+  font-family: 'Arial', sans-serif;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.logo {
+  max-width: 120px;
+  height: auto;
+}
+
+.receipt-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+  overflow-x: auto;
+}
+
+.receipt-header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.receipt-header h2 {
+  font-size: 2rem;
+  margin-bottom: 0.25rem;
+}
+
+.receipt-info p {
+  font-size: 1rem;
+  margin: 4px 0;
+}
+
+.receipt-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.receipt-table th,
+.receipt-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+
+.total-section {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.signature-section {
+  text-align: right;
+  margin-top: 2rem;
+}
+
+.signature-section p {
+  margin: 0;
+}
+
+/* Same look on mobile - scaled down */
+@media (max-width: 768px) {
+  .receipt-box {
+    padding: 1.2rem;
+  }
+
+  .receipt-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .receipt-info p {
+    font-size: 0.9rem;
+  }
+
+  .receipt-table {
+    font-size: 0.9rem;
+  }
+
+  .total-section {
+    font-size: 1rem;
+  }
+
+  .signature-section p {
+    font-size: 0.9rem;
+  }
+
+  .logo {
+    max-width: 90px;
+  }
+}
+
+/* Slightly smaller for very small devices */
+@media (max-width: 480px) {
+  .receipt-box {
+    padding: 1rem;
+  }
+
+  .receipt-header h2 {
+    font-size: 1.3rem;
+  }
+
+  .receipt-info p {
+    font-size: 0.8rem;
+  }
+
+  .receipt-table {
+    font-size: 0.8rem;
+  }
+
+  .logo {
+    max-width: 70px;
+  }
+
+  .signature-section {
+    font-size: 0.8rem;
+  }
+}
+.receipt-box {
+  width: 800px; /* Fixed width to avoid clipping */
+  max-width: 100%;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 850px) {
+  .receipt-box {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+  }
+}
