@@ -436,3 +436,18 @@ button + button:hover {
   color: #000 !important;
   background-color: #fff !important;
 }
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.input-group {
+  flex: 1;
+}
+
+@media (max-width: 600px) {
+  .input-row {
+    flex-direction: column;
+  }
+}

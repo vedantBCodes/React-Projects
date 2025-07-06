@@ -56,6 +56,13 @@ function BillForm() {
     setGeneratedAt(now);
     setSubmitted(true);
   };
+const handleNumberChange = (e) => {
+  const { name, value } = e.target;
+  // Allow only digits
+  if (/^\d*$/.test(value)) {
+    setFormData({ ...formData, [name]: value });
+  }
+};
 
 const generatePDF = async () => {
   window.scrollTo(0, 0); // Ensure full visibility
@@ -114,48 +121,117 @@ const fileName = `${firstName}_${roomNumber}_receipt.pdf`;
     <div className="container">
       {!submitted ? (
         <div className="form-container">
-          <form onSubmit={handleSubmit} className="styled-form">
-            <h2>Billing Receipt Form</h2>
+         <form onSubmit={handleSubmit} className="styled-form">
+  <h2>Billing Receipt Form</h2>
 
-            <label>Full Name *</label>
-            <input name="customerName" onChange={handleChange} required placeholder="Enter full name" />
+<div class="input-row">
+  <div class="input-group">
+  <label>Full Name *</label>
+  <input
+    name="customerName"
+    value={formData.customerName}
+    onChange={handleChange}
+    required
+    placeholder="Enter full name"
+  />
+  </div>
 
-            <label>Mobile Number *</label>
-            <input name="mobile" onChange={handleChange} required placeholder="Enter 10-digit mobile number" />
+ <div class="input-group">
+  <label>Mobile Number *</label>
+  <input
+    name="mobile"
+    value={formData.mobile}
+    onChange={handleChange}
+    required
+    placeholder="Enter 10-digit mobile number"
+    inputMode="numeric"
+    pattern="[0-9]*"
+  />
+  </div></div>
 
-            <label>Email ID</label>
-            <input name="email" onChange={handleChange} placeholder="Enter email address (optional)" />
+  <label>Email ID</label>
+  <input
+    name="email"
+    value={formData.email}
+    onChange={handleChange}
+    placeholder="Enter email address (optional)"
+  />
 
-            <label>Student's Address</label>
-            <input name="address" onChange={handleChange} placeholder="Enter full address" />
+  <label>Student's Address</label>
+  <input
+    name="address"
+    value={formData.address}
+    onChange={handleChange}
+    placeholder="Enter full address"
+  />
 
-            <label>Property Name *</label>
-            <select name="propertyName" onChange={handleChange} required>
-              <option value="">-- Select Property --</option>
-              <option value="CL Moonstone">CL Moonstone</option>
-              <option value="CL Valeria">CL Valeria</option>
-            </select>
+  <label>Property Name *</label>
+  <select
+    name="propertyName"
+    value={formData.propertyName}
+    onChange={handleChange}
+    required
+  >
+    <option value="">-- Select Property --</option>
+    <option value="CL Moonstone">CL Moonstone</option>
+    <option value="CL Valeria">CL Valeria</option>
+  </select>
 
-            <label>Room Number</label>
-            <input name="roomNo" onChange={handleChange} placeholder="Enter room number" />
+  <label>Room Number</label>
+  <input
+    name="roomNo"
+    value={formData.roomNo}
+    onChange={handleChange}
+    placeholder="Enter room number"
+  />
 
-            <label>Invoice Date (YYYY-MM-DD)</label>
-            <input name="invoiceDate" onChange={handleChange} placeholder="e.g. 2025-06-14" />
+  <label>Invoice Date (YYYY-MM-DD)</label>
+  <input
+    name="invoiceDate"
+    value={formData.invoiceDate}
+    onChange={handleChange}
+    placeholder="e.g. 2025-06-14"
+  />
+<label>Deposite (₹)</label>
+  <input
+  type="text"
+  name="roomDeposit"
+  value={formData.roomDeposit}
+  onChange={handleNumberChange}
+  placeholder="Enter deposit amount"
+/>
 
-            <label>Room Deposit (₹)</label>
-            <input name="roomDeposit" type="number" onChange={handleChange} placeholder="Enter deposit amount" />
+  <label>Room Rent (₹)</label>
+ <input
+  type="text"
+  name="roomRent"
+  value={formData.roomRent}
+  onChange={handleNumberChange}
+  placeholder="Enter rent amount"
+/>
 
-            <label>Room Rent (₹)</label>
-            <input name="roomRent" type="number" onChange={handleChange} placeholder="Enter rent amount" />
+  <label>Maintenance Charges (₹)</label>
+ <input
+  type="text"
+  name="maintenance"
+  value={formData.maintenance}
+  onChange={handleNumberChange}
+  placeholder="Enter maintainance"
+/>
 
-            <label>Maintenance Charges (₹)</label>
-            <input name="maintenance" type="number" onChange={handleChange} placeholder="Enter maintenance charges" />
+  <label>E-Bill Amount (₹)</label>
+  <input
+    name="preBooking"
+    type="number"
+    value={formData.preBooking}
+    onChange={handleChange}
+    placeholder="Enter e-bill amount"
+    inputMode="numeric"
+    pattern="[0-9]*"
+  />
 
-            <label>E-Bill Amount (₹)</label>
-            <input name="preBooking" type="number" onChange={handleChange} placeholder="Enter e-bill amount" />
-
-            <button type="submit">Generate Receipt</button>
-          </form>
+  <button type="submit">Generate Receipt</button>
+</form>
         </div>
       ) : (
         <div>
