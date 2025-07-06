@@ -430,3 +430,9 @@ button + button:hover {
     font-size: 14px;
   }
 }
+/* Final override for mobile rendering */
+.styled-form input,
+.styled-form select {
+  color: #000 !important;
+  background-color: #fff !important;
+}

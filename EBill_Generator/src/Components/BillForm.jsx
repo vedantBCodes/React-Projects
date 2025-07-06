@@ -76,9 +76,10 @@ const generatePDF = async () => {
   });
 
   pdf.addImage(imgData, "PNG", 0, 0, canvas.width, canvas.height);
-  const fileName = `${formData.customerName
-    .trim()
-    .replace(/\s+/g, "_")}_receipt.pdf`;
+  const firstName = formData.customerName.trim().split(" ")[0] || "Receipt";
+const roomNumber = formData.roomNo.trim() || "NoRoom";
+const fileName = `${firstName}_${roomNumber}_receipt.pdf`;
+
   pdf.save(fileName);
 };
 
@@ -174,7 +175,7 @@ const generatePDF = async () => {
             <div className="receipt-info">
               <p><strong>Receipt No:</strong> {receiptNumber}</p>
               <p><strong>Generated On:</strong> {generatedAt}</p>
-              <p><strong>Full Name:</strong> {formData.customerName}</p>
+              <p><strong>Full Name:</strong> {formData.customerName}</p> <br />
               <p><strong>Email:</strong> {formData.email}</p>
               <p><strong>Mobile No:</strong> {formData.mobile}</p>
               <p><strong>Invoice Date:</strong> {formData.invoiceDate}</p>
